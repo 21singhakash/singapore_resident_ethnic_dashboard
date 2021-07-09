@@ -12,7 +12,6 @@ df = pd.read_csv("singapore-residents-by-ethnic-group-and-sex-end-june-annual.cs
 df['value']=pd.to_numeric(df['value'], errors='coerce')
 df = df.groupby(['year','level_1'])[['value']].sum()
 df.reset_index(inplace=True)
-print(df[:5])
 ethnic_list = ["Total Malays", "Total Chinese", "Total Indians", "Other Ethnic Groups (Total)"]
 
 
@@ -40,9 +39,6 @@ app.layout = dhtml.Div([
     [Input(component_id='slct_factor', component_property='value')]
 )
 def update_graph(option_slctd):
-    print(option_slctd)
-    print(type(option_slctd))
-
     container= "The ethnic group selected was {}".format(option_slctd)
     dff = df.copy()
     dff = dff[dff['level_1']==option_slctd]
@@ -57,7 +53,6 @@ def update_graph(option_slctd):
     )
 
     return container, fig
-    #return fig
 
 #----------------------------------------------
 if __name__ == "__main__":
