@@ -6,4 +6,5 @@
 * use the below command:
   - py resident_line_plot.py
   - This will launch the dash app at the local port address.
+  - ![dash_app_address]()
 
