@@ -5,7 +5,7 @@
 # How to run the project
 * use the below command:
   - **_py resident_line_plot.py_**
-  - This will launch the dash app at the local port address.
+* This will launch the dash app at the local port address.
 
   ![dash_app_address](https://github.com/21singhakash/singapore_resident_ethnic_dashboard/blob/main/dash_app.png)
 
